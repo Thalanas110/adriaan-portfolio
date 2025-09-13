@@ -99,7 +99,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/*poem selectors for an ex fiancee, although I should no longer put them in here, some of my best UI/UX works are here.*/}
+          {/*poem selectors for an ex girlfriend, although I should no longer put them in here, some of my best UI/UX works are here.*/}
           <div className="project-card" data-category="web">
             <div className="project-image">
               <div className="image-placeholder">
@@ -107,7 +107,7 @@ const Portfolio = () => {
               </div>
               <div className="project-overlay">
                 <div className="project-links">
-                  <a href="https://poemselections.netlify.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
+                  <a href="" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
                   <a href="#" className="project-link" aria-label="View Code">
@@ -120,7 +120,7 @@ const Portfolio = () => {
               <h3>Poem Selectors</h3>
               <p>Poem selection panes that I did for my now ex-girlfriend. All displayed on the website, just click to select.
                 Although these should no longer be here, some of my best UI/UX works are here.
-                Will be edited in the future to remove names.
+                Under maintenance to remove ALL names and only the UI + poems will remain.
               </p>
               <div className="project-tags">
                 <span className="tag">Vanilla</span>
