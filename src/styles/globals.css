@@ -211,6 +211,48 @@ body {
   border-color: var(--accent-primary);
 }
 
+/* Page Fade Animations */
+.page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page-container.fadeIn {
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+.page-container.fadeOut {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Additional smooth transitions for better UX */
+.page-container * {
+  transition: inherit;
+}
+
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;

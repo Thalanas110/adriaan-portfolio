@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
 import SnowParticles from './components/SnowParticles'
 import ThemeToggle from './components/ThemeToggle'
@@ -8,6 +9,39 @@ import Portfolio from './pages/Portfolio'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 import './styles/globals.css'
+
+// Animated Routes Component
+function AnimatedRoutes() {
+  const location = useLocation()
+  const [displayLocation, setDisplayLocation] = useState(location)
+  const [transitionStage, setTransitionStage] = useState("fadeIn")
+
+  useEffect(() => {
+    if (location !== displayLocation) {
+      setTransitionStage("fadeOut")
+    }
+  }, [location, displayLocation])
+
+  return (
+    <div
+      className={`page-container ${transitionStage}`}
+      onAnimationEnd={() => {
+        if (transitionStage === "fadeOut") {
+          setDisplayLocation(location)
+          setTransitionStage("fadeIn")
+        }
+      }}
+    >
+      <Routes location={displayLocation}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -26,13 +60,7 @@ function App() {
 
         {/* Main Content */}
         <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <AnimatedRoutes />
         </main>
       </div>
     </Router>
