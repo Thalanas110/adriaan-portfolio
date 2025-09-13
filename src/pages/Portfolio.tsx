@@ -118,7 +118,7 @@ const Portfolio = () => {
             </div>
             <div className="project-content">
               <h3>Poem Selectors</h3>
-              <p>Poem selection panes that I did for my now ex-fiancee. All displayed on the website, just click to select.
+              <p>Poem selection panes that I did for my now ex-girlfriend. All displayed on the website, just click to select.
                 Although these should no longer be here, some of my best UI/UX works are here.
                 Will be edited in the future to remove names.
               </p>

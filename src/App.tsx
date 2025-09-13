@@ -22,6 +22,11 @@ function AnimatedRoutes() {
     }
   }, [location, displayLocation])
 
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [location.pathname])
+
   return (
     <div
       className={`page-container ${transitionStage}`}
