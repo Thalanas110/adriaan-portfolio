@@ -132,12 +132,15 @@ body {
   margin-left: var(--sidebar-width);
   min-height: 100vh;
   transition: margin-left var(--transition-medium);
+  width: calc(100% - var(--sidebar-width));
+  box-sizing: border-box;
 }
 
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 /* Common Button Styles */
@@ -253,12 +256,40 @@ body {
   transition: inherit;
 }
 
+/* Mobile and tablet responsive adjustments */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .page-container {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .page-title {
     font-size: 2.5rem;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .page-container {
+    padding: 0.75rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
   }
 }
