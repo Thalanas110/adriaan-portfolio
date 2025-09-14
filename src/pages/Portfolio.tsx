@@ -110,7 +110,7 @@ const Portfolio = () => {
                   <a href="https://poemselections.netlify.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="https://github.com/Thalanas110/poemselectors/" className="project-link" aria-label="View Code">
+                  <a href="https://github.com/Thalanas110/poemselectors/" target="_blank" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
@@ -170,7 +170,7 @@ const Portfolio = () => {
                   <a href="https://arcanumlogout.vercel.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="https://github.com/Thalanas110/arcanumlogout/" className="project-link" aria-label="View Code">
+                  <a href="https://github.com/Thalanas110/arcanumlogout/" target="_blank" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
@@ -199,7 +199,7 @@ const Portfolio = () => {
                   <a href="#" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="#" className="project-link" aria-label="View Code">
+                  <a href="#" target="_blank" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
@@ -227,7 +227,7 @@ const Portfolio = () => {
                   <a href="#" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="https://github.com/Thalanas110/DimateBlogsiteAPI" className="project-link" aria-label="View Code">
+                  <a href="https://github.com/Thalanas110/DimateBlogsiteAPI" target="_blank" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
@@ -254,7 +254,7 @@ const Portfolio = () => {
                   <a href="#" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="#" className="project-link" aria-label="View Code">
+                  <a href="#" target="_blank" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
