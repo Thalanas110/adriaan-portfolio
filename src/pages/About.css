@@ -1,3 +1,47 @@
+/* Typing Animation Styles */
+.typing-text {
+  font-family: 'Courier New', monospace;
+}
+
+.cursor {
+  color: var(--accent-primary);
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Enhanced typing effects */
+.profile-info h2.typing-text {
+  font-family: inherit;
+  min-height: 3rem;
+}
+
+.profile-info .role.typing-text {
+  min-height: 1.5rem;
+}
+
+.profile-info .bio.typing-text {
+  min-height: 6rem;
+  text-align: justify;
+}
+
 .about-content {
   display: grid;
   gap: 3rem;

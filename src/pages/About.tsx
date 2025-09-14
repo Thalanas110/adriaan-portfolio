@@ -1,6 +1,54 @@
+import { useState, useEffect } from 'react'
 import './About.css'
 
+// Custom hook for typing animation
+const useTypewriter = (text: string, speed: number = 50, delay: number = 0) => {
+  const [displayText, setDisplayText] = useState('')
+  const [isComplete, setIsComplete] = useState(false)
+
+  useEffect(() => {
+    if (delay > 0) {
+      const delayTimeout = setTimeout(() => {
+        let i = 0
+        const timer = setInterval(() => {
+          if (i < text.length) {
+            setDisplayText(text.slice(0, i + 1))
+            i++
+          } else {
+            setIsComplete(true)
+            clearInterval(timer)
+          }
+        }, speed)
+        return () => clearInterval(timer)
+      }, delay)
+      return () => clearTimeout(delayTimeout)
+    } else {
+      let i = 0
+      const timer = setInterval(() => {
+        if (i < text.length) {
+          setDisplayText(text.slice(0, i + 1))
+          i++
+        } else {
+          setIsComplete(true)
+          clearInterval(timer)
+        }
+      }, speed)
+      return () => clearInterval(timer)
+    }
+  }, [text, speed, delay])
+
+  return { displayText, isComplete }
+}
+
 const About = () => {
+  // Typing animations for different text elements
+  const greeting = useTypewriter("Hello, I'm Adriaan M. Dimate", 80, 500)
+  const role = useTypewriter("Full Stack Developer & Future Airline Captain", 60, 2000)
+  const bio = useTypewriter(
+    "I'm an autistic developer with a love for creating beautiful, functional, and user-centered digital experiences. With a background in both frontend and backend development, I enjoy bringing ideas to life through clean, efficient code and thoughtful design. I also am aiming to become an airline captain, combining my passion for aviation with my technical skills, combined with my passion for flying and travelling, ensuring a smooth, pleasant, and lovely experience for users and passengers.",
+    25,
+    4000
+  )
   return (
     <div className="page-container">
       <div className="page-header">
@@ -14,16 +62,19 @@ const About = () => {
               <img src="/assets/pfp.jpg" alt="Adriaan M. Dimate Profile Photo" className="profile-photo" />
             </div>
             <div className="profile-info">
-              <h2>Hello, I'm Adriaan M. Dimate</h2>
-              <p className="role">Full Stack Developer & Future Airline Captain</p>
-              <p className="bio">
-                I'm an autistic developer with a love for creating beautiful, functional, and user-centered digital experiences.
-                With a background in both frontend and backend development, I enjoy bringing ideas to life through clean,
-                efficient code and thoughtful design.
-                I also am aiming to become an airline captain, combining my passion for aviation with my technical skills,
-                combined with my passion for flying and travelling, ensuring a smooth, pleasant, and lovely experience for users and passengers.
+              <h2 className="typing-text">
+                {greeting.displayText}
+                {!greeting.isComplete && <span className="cursor">|</span>}
+              </h2>
+              <p className="role typing-text">
+                {role.displayText}
+                {!role.isComplete && greeting.isComplete && <span className="cursor">|</span>}
               </p>
-              <div className="resume-download">
+              <p className="bio typing-text">
+                {bio.displayText}
+                {!bio.isComplete && role.isComplete && <span className="cursor">|</span>}
+              </p>
+              <div className={`resume-download ${bio.isComplete ? 'fade-in' : 'hidden'}`}>
                 <a href="/assets/resume.pdf" download className="btn btn-primary">
                   <i className="fas fa-download"></i>
                   <span>Download Resume</span>
