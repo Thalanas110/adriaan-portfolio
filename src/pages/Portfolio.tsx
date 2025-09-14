@@ -107,10 +107,10 @@ const Portfolio = () => {
               </div>
               <div className="project-overlay">
                 <div className="project-links">
-                  <a href="" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
+                  <a href="https://poemselections.netlify.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="#" className="project-link" aria-label="View Code">
+                  <a href="https://github.com/Thalanas110/poemselectors/" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
@@ -124,6 +124,7 @@ const Portfolio = () => {
               </p>
               <div className="project-tags">
                 <span className="tag">Vanilla</span>
+                <span className="tag">Node.js</span>
                 <span className="tag">Trigonometric Operations</span>
               </div>
             </div>
@@ -169,7 +170,7 @@ const Portfolio = () => {
                   <a href="https://arcanumlogout.vercel.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="#" className="project-link" aria-label="View Code">
+                  <a href="https://github.com/Thalanas110/arcanumlogout/" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
@@ -226,7 +227,7 @@ const Portfolio = () => {
                   <a href="#" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="#" className="project-link" aria-label="View Code">
+                  <a href="https://github.com/Thalanas110/DimateBlogsiteAPI" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
