@@ -41,16 +41,50 @@ const useTypewriter = (text: string, speed: number = 50, delay: number = 0) => {
 }
 
 const About = () => {
+  // Loading overlay state
+  const [isLoading, setIsLoading] = useState(true)
+  const [imageLoaded, setImageLoaded] = useState(false)
+
   // Typing animations for different text elements
-  const greeting = useTypewriter("Hello, I'm Adriaan M. Dimate", 80, 500)
-  const role = useTypewriter("Full Stack Developer & Future Airline Captain", 60, 2000)
+  const greeting = useTypewriter("Hello, I'm Adriaan M. Dimate", 80, isLoading ? 9999 : 500)
+  const role = useTypewriter("Full Stack Developer & Future Airline Captain", 60, isLoading ? 9999 : 2000)
   const bio = useTypewriter(
     "I'm an autistic developer with a love for creating beautiful, functional, and user-centered digital experiences. With a background in both frontend and backend development, I enjoy bringing ideas to life through clean, efficient code and thoughtful design. I also am aiming to become an airline captain, combining my passion for aviation with my technical skills, combined with my passion for flying and travelling, ensuring a smooth, pleasant, and lovely experience for users and passengers.",
     25,
-    4000
+    isLoading ? 9999 : 4000
   )
+
+  useEffect(() => {
+    if (!imageLoaded) return
+    // ensure loader shows briefly for animation
+    const t = setTimeout(() => setIsLoading(false), 600)
+    return () => clearTimeout(t)
+  }, [imageLoaded])
+
+  // fallback: hide loader after 3s even if image doesn't load
+  useEffect(() => {
+    const fallback = setTimeout(() => setIsLoading(false), 3000)
+    return () => clearTimeout(fallback)
+  }, [])
+
+  const handleImageLoad = () => setImageLoaded(true)
+
   return (
-    <div className="page-container">
+    <>
+      {/* Plane loading overlay */}
+      {isLoading && (
+        <div className="plane-loader" role="status" aria-live="polite">
+          <div className="plane-scene">
+            <div className="runway" />
+            <div className="plane">
+              <div className="plane-body" />
+              <div className="plane-wing" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="page-container">
       <div className="page-header">
         <h1 className="page-title">Who am I?</h1>
       </div>
@@ -58,8 +92,8 @@ const About = () => {
       <div className="about-content">
         <div className="about-intro">
           <div className="profile-section">
-            <div className="profile-image">
-              <img src="/assets/pfp.jpg" alt="Adriaan M. Dimate Profile Photo" className="profile-photo" />
+              <div className="profile-image">
+              <img src="/assets/pfp.jpg" alt="Adriaan M. Dimate Profile Photo" className="profile-photo" onLoad={handleImageLoad} />
             </div>
             <div className="profile-info">
               <h2 className="typing-text">
@@ -176,6 +210,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
