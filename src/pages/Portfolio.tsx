@@ -130,119 +130,6 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/*anonymous corkboard system for gazelvouer monthsary 2*/}
-          <div className="project-card" data-category="web">
-            <div className="project-image">
-              <div className="image-placeholder">
-                <i className="fas fa-blog"></i>
-              </div>
-              <div className="project-overlay">
-                <div className="project-links">
-                  <a href="https://corkboardnew.vercel.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
-                    <i className="fas fa-external-link-alt"></i>
-                  </a>
-                  <a href="https://github.com/zionren/corkboard" target="_blank" className="project-link" aria-label="View Code" rel="noopener noreferrer">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="project-content">
-              <h3>Anonymous Corkboard</h3>
-              <p>Simple anonymous corkboard system that I used for Gazelvouer Monthsary 2</p>
-              <div className="project-tags">
-                <span className="tag">Vanilla</span>
-                <span className="tag">Node.js</span>
-                <span className="tag">PostgreSQL</span>
-                <span className="tag">Supabase</span>
-              </div>
-            </div>
-          </div>
-
-          {/*rp hood council logout system thats barely working even*/}
-          <div className="project-card" data-category="web">
-            <div className="project-image">
-              <div className="image-placeholder">
-                <i className="fas fa-gamepad"></i>
-              </div>
-              <div className="project-overlay">
-                <div className="project-links">
-                  <a href="https://arcanumlogout.vercel.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
-                    <i className="fas fa-external-link-alt"></i>
-                  </a>
-                  <a href="https://github.com/Thalanas110/arcanumlogout/" target="_blank" className="project-link" aria-label="View Code">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="project-content">
-              <h3>RP Log Out System</h3>
-              <p>crapping myself up with a logout system for rp hood council members of a specific hood that needs more fixing and is barely working at all</p>
-              <div className="project-tags">
-                <span className="tag">Vanilla</span>
-                <span className="tag">PostgreSQL</span>
-                <span className="tag">Node.js</span>
-                <span className="tag">Supabase</span>
-              </div>
-            </div>
-          </div>
-
-          {/*new set of poem selectors*/}
-          <div className="project-card" data-category="web">
-            <div className="project-image">
-              <div className="image-placeholder">
-                <i className="fas fa-gamepad"></i>
-              </div>
-              <div className="project-overlay">
-                <div className="project-links">
-                  <a href="#" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
-                    <i className="fas fa-external-link-alt"></i>
-                  </a>
-                  <a href="#" target="_blank" className="project-link" aria-label="View Code">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="project-content">
-              <h3>Poem Selectors v2</h3>
-              <p>Poem selectors again, different ones, but this time, will be edited in the future.</p>
-              <div className="project-tags">
-                <span className="tag">ReactJS</span>
-                <span className="tag">Tailwind CSS</span>
-                <span className="tag">Node.js</span>
-              </div>
-            </div>
-          </div>
-
-          {/*blogsite api i randomly made myself*/}
-          <div className="project-card" data-category="web">
-            <div className="project-image">
-              <div className="image-placeholder">
-                <i className="fas fa-gamepad"></i>
-              </div>
-              <div className="project-overlay">
-                <div className="project-links">
-                  <a href="#" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
-                    <i className="fas fa-external-link-alt"></i>
-                  </a>
-                  <a href="https://github.com/Thalanas110/DimateBlogsiteAPI" target="_blank" className="project-link" aria-label="View Code">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="project-content">
-              <h3>Blogsite API</h3>
-              <p>Backend only API using Vanilla PHP and MySQL inside XAMPP, currently still being fixed.</p>
-              <div className="project-tags">
-                <span className="tag">Vanilla PHP</span>
-                <span className="tag">MySQL</span>
-              </div>
-            </div>
-          </div>
-
           {/*i care center website*/}
           <div className="project-card" data-category="web">
             <div className="project-image">
@@ -277,6 +164,12 @@ const Portfolio = () => {
 
 
         </div>
+      </div>
+      <div className="portfolio-footer" style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <a href="https://allofadriaansprojects.netlify.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <i className="fas fa-folder-open"></i>
+          <span>More Projects</span>
+        </a>
       </div>
     </div>
   )

@@ -237,6 +237,17 @@
   overflow: visible;
 }
 
+/* Button group to align resume + learn-more buttons */
+.btn-group {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-group .btn {
+  padding: 0.75rem 1.25rem;
+}
+
 .runway {
   position: absolute;
   bottom: 12px;

@@ -109,10 +109,16 @@ const About = () => {
                 {!bio.isComplete && role.isComplete && <span className="cursor">|</span>}
               </p>
               <div className={`resume-download ${bio.isComplete ? 'fade-in' : 'hidden'}`}>
-                <a href="/assets/resume.pdf" download className="btn btn-primary">
-                  <i className="fas fa-download"></i>
-                  <span>Download Resume</span>
-                </a>
+                <div className="btn-group">
+                  <a href="/assets/resume.pdf" download className="btn btn-primary">
+                    <i className="fas fa-download"></i>
+                    <span>Download Resume</span>
+                  </a>
+                  <a href="/contact" className="btn btn-secondary" aria-label="Learn more about me">
+                    <i className="fas fa-user"></i>
+                    <span>Learn more about me</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
