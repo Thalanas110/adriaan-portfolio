@@ -114,7 +114,7 @@ const About = () => {
                     <i className="fas fa-download"></i>
                     <span>Download Resume</span>
                   </a>
-                  <a href="/contact" className="btn btn-secondary" aria-label="Learn more about me">
+                  <a href="https://adriaanmdimate.netlify.app/" className="btn btn-secondary" aria-label="Learn more about me">
                     <i className="fas fa-user"></i>
                     <span>Learn more about me</span>
                   </a>
