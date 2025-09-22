@@ -1,36 +1,9 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import './Home.css'
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true)
-
-  // Hide loader when the window finishes loading or after a timeout
-  useEffect(() => {
-    const onLoad = () => setIsLoading(false)
-    window.addEventListener('load', onLoad)
-    const t = setTimeout(() => setIsLoading(false), 2500)
-    return () => {
-      window.removeEventListener('load', onLoad)
-      clearTimeout(t)
-    }
-  }, [])
-
   return (
-    <>
-      {isLoading && (
-        <div className="plane-loader" role="status" aria-live="polite">
-          <div className="plane-scene">
-            <div className="runway" />
-            <div className="plane">
-              <div className="plane-body" />
-              <div className="plane-wing" />
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="page-container">
+    <div className="page-container">
       <div className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
@@ -96,8 +69,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
-    </>
+  </div>
   )
 }
 
