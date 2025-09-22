@@ -70,7 +70,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/*rp hood attendance system for a now-dissolved hood*/}
+          {/*weather PWA*/}
           <div className="project-card" data-category="web">
             <div className="project-image">
               <div className="image-placeholder">
@@ -78,22 +78,22 @@ const Portfolio = () => {
               </div>
               <div className="project-overlay">
                 <div className="project-links">
-                  <a href="https://attendance-tracking-self.vercel.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
+                  <a href="https://quicksky.netlify.app/" target="_blank" className="project-link" aria-label="View Live" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
-                  <a href="#" className="project-link" aria-label="View Code">
+                  <a href="https://github.com/Thalanas110/NewWeatherPWA" className="project-link" aria-label="View Code">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
               </div>
             </div>
             <div className="project-content">
-              <h3>RPW Hood Attendance System</h3>
-              <p>Attendance System for the now-dissolved Gazelvouer hood in RPW</p>
+              <h3>QuickSky Weather PWA</h3>
+              <p>No-nonsense and no-bloatware progressive web app for weather forecasts</p>
               <div className="project-tags">
-                <span className="tag">Vanilla</span>
-                <span className="tag">Supabase</span>
-                <span className="tag">PostgreSQL</span>
+                <span className="tag">React</span>
+                <span className="tag">TailwindCSS</span>
+                <span className="tag">OpenWeatherMap</span>
                 <span className="tag">Node.js</span>
               </div>
             </div>
